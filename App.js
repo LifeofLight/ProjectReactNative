@@ -61,22 +61,23 @@ const App = () => {
    <WebViewLoading/> 
    )
 }
-
 export default App
-
 const styles = StyleSheet.create({})
 */
+
 
 import React from "react";
 import { StyleSheet, Text, View } from 'react-native'
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreens from "./screens/HomeScreens"; 
-import AboutScreen from "./screens/AboutScreen";
+import HomeScreens from "./screen/HomeScreen"; 
+import AboutScreen from "./screen/AboutScreen";
+import FirstPage from"./screen/FirstPage";
+import SecondPage from"./screen/SecondPage";
 
+// HomeScreen/AboutScreen
 const Stack =createNativeStackNavigator();
-
 const App=()=>{
   return(
     <NavigationContainer>
@@ -99,5 +100,30 @@ const App=()=>{
     </NavigationContainer>
   );
 }
-
 export default App
+
+// FirstPage/SecondPage
+// const Stack =createNativeStackNavigator();
+
+// const App=()=>{
+//   return(
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="FirstPage"
+//       screenOptions={{
+//         headerStyle: {
+//           backgroundColor: '#135790',
+//         },
+//         headerTintColor: '#fff',
+//         headerTitleStyle: {
+//           fontWeight: 'bold',
+//         },
+//       }}>
+//         <Stack.Screen name="FirstPage" component={FirstPage} 
+//         options={{title:'FirstPage'}}/>
+//         <Stack.Screen name="SecondPage" component={SecondPage} 
+//         options={{title:'Second Page'}}/>
+
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
